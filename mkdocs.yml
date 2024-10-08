@@ -1,0 +1,65 @@
+site_name: Sergio Documentation
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - blog
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: teal
+      accent: purple
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: purple
+      accent: lime
+
+plugins:
+  - blog:
+      blog_dir: .
+      enabled: false
+      blog_toc: true
+      post_url_date_format: yyyy/MM
+      post_date_format: medium
+      post_url_format: "{slug}"
+      post_readtime: true
+      post_readtime_words_per_minute: 265
+      archive: true  
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/sergiiob
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/sergio-barrientose/
+      
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+
+copyright: |
+  &copy; 2024 <a href="https://github.com/sergiiob" target="_blank" rel="noopener"> SergiioB</a>
